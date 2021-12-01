@@ -38,7 +38,7 @@
                         <a href="/registro.php" class="nav-link text-white">Habitaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/views/objetosPerdidos/vistaobjeto.php" class="nav-link text-white">Objetos Perdidos</a>
+                        <a href="/view/vistaobjeto.php" class="nav-link text-white">Objetos Perdidos</a>
                     </li>
                     <li class="nav-item">
                         <a href="/registro.php" class="nav-link text-white">Asistencia</a>
