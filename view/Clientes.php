@@ -14,7 +14,7 @@
                 <h5 class="modal-title">Crear Empleado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/controller/controllerEmpleado.php" method="post">
+            <form action="/controller/controllerCliente.php" method="post">
             <div class="modal-body">
                     <div class="mb-3">
                       <label for="" class="form-label"></label>
@@ -29,22 +29,20 @@
                       <input type="text" class="form-control" name="mail" aria-describedby="helpId" placeholder="correo">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label"></label>
-                        <select class="form-control" name="rol" id="">
-                            <option value="0">Inactivo</option>
-                            <option value="1">Administrador</option>
-                            <option value="2">Gerente</option>
-                            <option value="3">Resepcionista</option>
-                            <option value="4">Limpiesa</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
                       <label for="" class="form-label"></label>
                       <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Nombre">
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label"></label>
                       <input type="text" class="form-control" name="lastname" id="" aria-describedby="helpId" placeholder="Apellidos">
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label"></label>
+                      <input type="text" class="form-control" name="nit" id="" aria-describedby="helpId" placeholder="Nit">
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label"></label>
+                      <input type="text" class="form-control" name="addres" id="" aria-describedby="helpId" placeholder="Dirección">
                     </div>
             </div>
             <div class="modal-footer">
@@ -68,14 +66,15 @@
         <th>Correo</th>
         <th>Nombre</th>
         <th>Apellidos</th>
-        <th>Permisos</th>
+        <th>Nit</th>
+        <th>Dirección</th>
         <th>Aciones</th>
       </tr>
     </thead>
     <tbody>
     <?php
       $conexion_ = new db();
-      $result = $conexion_->conexion ("SELECT * FROM `usuarios` INNER JOIN empleado ON usuarios.IdUsuario = empleado.IdUsuario where usuarios.rol <>5; ");
+      $result = $conexion_->conexion ("SELECT * FROM `usuarios` INNER join clientes on usuarios.IdUsuario = clientes.IdUsuario WHERE usuarios.rol = 0;");
       while($row = mysqli_fetch_array($result)){ 
       ?>
       
@@ -84,9 +83,10 @@
           <td><?php echo $row['NombreUsuario'] ?></td>
           <td><?php echo $row['password'] ?></td>
           <td><?php echo $row['Correo'] ?></td>
-          <td><?php echo $row['NombreEmpleado'] ?></td>
-          <td><?php echo $row['ApellidoEmpleado'] ?></td>
-          <td><?php echo $row['rol'] ?></td>
+          <td><?php echo $row['NombreCliente'] ?></td>
+          <td><?php echo $row['ApellidoCliente'] ?></td>
+          <td><?php echo $row['Nit'] ?></td>
+          <td><?php echo $row['Direccion'] ?></td>
           <th>
             <a href="../controller/controllerEmpleado.php?id=<?php echo $row['IdUsuario'] ?>" class="btn btn-danger btn-lg"> Eliminar</a>
           </th>

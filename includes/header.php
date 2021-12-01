@@ -20,16 +20,16 @@
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/views/<?php session_start(); if($_SESSION['rol'] == 1){echo "Clientes";}else if($_SESSION['rol'] == 2){echo "Empleados";} ?>/home.php" class="nav-link text-white">Incio</a>
+                        <a href="/view/home.php" class="nav-link text-white">Incio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/views/Clientes/Cliente.php" class="nav-link text-white">Clientes</a>
+                        <a href="/view/Clientes.php" class="nav-link text-white">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Servicios" class="nav-link text-white">Empleados</a>
+                        <a href="/view/Empleado.php" class="nav-link text-white">Empleados</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Contactenos" class="nav-link text-white">Facturas</a>
+                        <a href="/view/Factura.php" class="nav-link text-white">Facturas</a>
                     </li>
                     <li class="nav-item">
                         <a href="/views/Habitaciones/mantenimiento.php" class="nav-link text-white">Mantenimiento</a>
@@ -47,7 +47,7 @@
                         <a href="/registro.php" class="nav-link text-white">Cotisasiones</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/controlador/Logout.php" class="nav-link text-white">Cerrar Sesión</a>
+                        <a href="/controller/controllerLogout.php" class="nav-link text-white">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
