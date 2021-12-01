@@ -1,0 +1,35 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+.text-spartan{
+    font-family: 'Spartan', sans-serif;
+}
+.logo{
+    font-family: 'Courgette', cursive;
+}
+.banner-image{
+    background-image: url("/img/playa.jpg");
+    background-image: cover;
+}
+.banner-image2{
+    background-image: url("/img/playa2.jpg");
+    background-image: cover;
+}
+.img-login{
+    background-image: url("/img/playa-login.jpg");
+    background-image: cover;
+}
+.img-registro{
+    background-image: url("/img/playa-registro.jpg");
+    background-image: cover;
+}
+.imgCard{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 1%;
+    margin: auto;
+    
+}
